@@ -1,0 +1,30 @@
+{
+  "name": "flojics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start":"node index.js"
+  },
+  "engines": {
+    "node": "14.15.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "binary-uuid": "^2.0.3",
+    "compression": "^1.7.4",
+    "config": "^3.3.6",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.2",
+    "mysql": "^2.18.1",
+    "tslib": "^2.3.1",
+    "uuid": "^8.3.2"
+  }
+}
