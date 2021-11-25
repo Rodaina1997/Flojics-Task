@@ -68,12 +68,6 @@ function InsertToDatabase(email, name, phone) {
 
 
 
-
-    // const id = crypto.randomBytes(16).toString("hex");
-    // const binaryID = createBinaryUUID();
-    // console.log(binaryID)
-
-
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
