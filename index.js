@@ -1,7 +1,7 @@
 let debug = require('debug')('app:index');
 const express = require('express');
 const configDB = require('./src/config');
-const cool = require('cool-ascii-faces');
+//const cool = require('cool-ascii-faces');
 
 
 const app = express();// Created a new web server
@@ -19,7 +19,7 @@ configDB.startConnection();
 app.use('/', require('./src/routes'));
 
 
-app.get('/cool', (req, res) => res.send(cool()))
+//app.get('/cool', (req, res) => res.send(cool()))
 
 // listen on the port 
 const port = process.env.PORT || 5000;// GETS the port from the Environmet variables.
