@@ -2,6 +2,9 @@ const { request } = require('express');
 const Joi = require('joi');
 const { validate } = require('../models/postRequest');
 const amqplib = require('amqplib');
+const jwt = require('jsonwebtoken');
+const config = require('config');
+const jwtKey = "my_secret_key"
 //const { v1: uuidv1 } = require('uuid')
 //const crypto = require("crypto");
 //const { createBinaryUUID, fromBinaryUUID } = require("binary-uuid");
@@ -20,8 +23,10 @@ async function HandlePostApi(request, response) {
         const msg = JSON.stringify({ Email, Name, Phone });
         await addmessages(msg);
         await consumemessages();
-        //console.log("tamam")
-        return response.status(200).send({ Msg: "Successful Entry" });
+        const token = jwt.sign({
+            mobile: Phone
+        }, jwtKey);
+        return response.status(200).send({ Msg: "Successful Entry", Your_token: token });
     }
 
 
