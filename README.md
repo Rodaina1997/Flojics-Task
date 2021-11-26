@@ -1,6 +1,6 @@
 # Flojics-Task
 
-User uses Post Api to send json formatted data
+1. User uses Post Api to send json formatted data <br />
 User receives in the response his json web token 
 Data is then added to Rabbitmq 
 Consumer(worker) send this data to mysql database named "Mymessages" in table "messages"
